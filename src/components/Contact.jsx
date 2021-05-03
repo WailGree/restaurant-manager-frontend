@@ -1,10 +1,8 @@
-import React from 'react'
-
 function Contact() {
 
     return (
         <div>
-        This is the contact page
+            This is the contact page
         </div>
     )
 }
