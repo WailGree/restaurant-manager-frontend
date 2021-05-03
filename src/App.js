@@ -8,10 +8,8 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        {/* <Redirect exact from="/" to="/home"/>
-        <Route exact path="/:page?" render={props => <Navbar {...props} />} /> */}
-        <Redirect exact from="/home" to="/home/home" />
-        <Route exact path="/home/:page?" render={props => <Navbar {...props} />} />
+        <Redirect exact from="/" to="/home" />
+        <Route exact path="/:page?" render={props => <Navbar {...props} />} />
       </Switch>
     </div>
   );
