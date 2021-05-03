@@ -1,14 +1,18 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import Homepage from './components/Homepage';
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      
+      <Switch>
+        {/* <Redirect exact from="/" to="/home"/>
+        <Route exact path="/:page?" render={props => <Navbar {...props} />} /> */}
+        <Redirect exact from="/home" to="/home/home" />
+        <Route exact path="/home/:page?" render={props => <Navbar {...props} />} />
+      </Switch>
     </div>
   );
 }
