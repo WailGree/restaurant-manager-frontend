@@ -3,9 +3,22 @@ import { Tabs, Tab, AppBar } from '@material-ui/core';
 import Homepage from './Homepage';
 import Contact from './Contact';
 
-function Navbar() {
-    const [selectedTab, setSelectedTab] = React.useState(0);
-
+function Navbar(props) {
+    const { match } = props;
+    const { params } = match;
+    const { page } = params;
+    
+    const tabNameToIndex = {
+        0: "home",
+        1: "contact"
+    }
+    
+    const indexToTabName = {
+        "home": 0,
+        "contact": 1
+    }
+    const [selectedTab, setSelectedTab] = React.useState(indexToTabName);
+    console.log(page);
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
     }
@@ -14,7 +27,7 @@ function Navbar() {
             <div>
                 <AppBar position="static">
                     <Tabs value={selectedTab} onChange={handleChange} centered>
-                        <Tab label="Home page" />
+                        <Tab label="Home" />
                         <Tab label="Contact" />
                     </Tabs>
                 </AppBar>
