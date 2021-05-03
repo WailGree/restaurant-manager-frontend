@@ -4,7 +4,7 @@ import Homepage from './Homepage';
 import Contact from './Contact';
 
 function Navbar(props) {
-    const { match } = props;
+    const { match, history } = props;
     const { params } = match;
     const { page } = params;
 
@@ -20,6 +20,7 @@ function Navbar(props) {
 
     const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
     const handleChange = (event, newValue) => {
+        history.push(`/home/${tabNameToIndex[newValue]}`);
         setSelectedTab(newValue);
     }
     return (
