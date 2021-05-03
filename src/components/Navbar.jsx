@@ -7,18 +7,18 @@ function Navbar(props) {
     const { match } = props;
     const { params } = match;
     const { page } = params;
-    
+
     const tabNameToIndex = {
         0: "home",
         1: "contact"
     }
-    
+
     const indexToTabName = {
         "home": 0,
         "contact": 1
     }
-    const [selectedTab, setSelectedTab] = React.useState(indexToTabName);
-    console.log(page);
+
+    const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
     }
