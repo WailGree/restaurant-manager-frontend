@@ -1,6 +1,7 @@
 import React from 'react'
 import { Tabs, Tab, AppBar } from '@material-ui/core';
 import Homepage from './Homepage';
+import Menu from './Menu';
 import Contact from './Contact';
 
 function Navbar(props) {
@@ -10,12 +11,14 @@ function Navbar(props) {
 
     const tabNameToIndex = {
         0: "home",
-        1: "contact"
+        1: "menu",
+        2: "contact"
     }
 
     const indexToTabName = {
         "home": 0,
-        "contact": 1
+        "menu": 1,
+        "contact": 2
     }
 
     const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
@@ -30,11 +33,13 @@ function Navbar(props) {
             <AppBar position="static">
                 <Tabs value={selectedTab} onChange={handleChange} centered>
                     <Tab label="Home" />
+                    <Tab label="Menu" />
                     <Tab label="Contact" />
                 </Tabs>
             </AppBar>
             {selectedTab === 0 && <Homepage />}
-            {selectedTab === 1 && <Contact />}
+            {selectedTab === 1 && <Menu />}
+            {selectedTab === 2 && <Contact />}
         </div>
     )
 }
