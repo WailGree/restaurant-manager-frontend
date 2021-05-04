@@ -19,23 +19,23 @@ function Navbar(props) {
     }
 
     const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
+
     const handleChange = (event, newValue) => {
         history.push(`/${tabNameToIndex[newValue]}`);
         setSelectedTab(newValue);
     }
+
     return (
-        <>
-            <div>
-                <AppBar position="static">
-                    <Tabs value={selectedTab} onChange={handleChange} centered>
-                        <Tab label="Home" />
-                        <Tab label="Contact" />
-                    </Tabs>
-                </AppBar>
-                {selectedTab === 0 && <Homepage />}
-                {selectedTab === 1 && <Contact />}
-            </div>
-        </>
+        <div>
+            <AppBar position="static">
+                <Tabs value={selectedTab} onChange={handleChange} centered>
+                    <Tab label="Home" />
+                    <Tab label="Contact" />
+                </Tabs>
+            </AppBar>
+            {selectedTab === 0 && <Homepage />}
+            {selectedTab === 1 && <Contact />}
+        </div>
     )
 }
 
