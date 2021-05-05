@@ -56,7 +56,22 @@ export default function About() {
     return (
         <div>
             <Grid container spacing={0} className={classes.containerGrid}>
-                {gridItems}
+                <Grid item xl={gridItemxl}>
+                    <Card className={classes.card}>
+                        <CardMedia
+                            className={classes.cardMedia}
+                            image={process.env.PUBLIC_URL + '/roland_dominik_szilagyi.png'} title="Máté Szathmári image" />
+                        <Typography>Roland Dominik Szilágyi</Typography>
+                    </Card>
+                </Grid>
+                <Grid item xl={gridItemxl}>
+                    <Card className={classes.card}>
+                        <CardMedia
+                            className={classes.cardMedia}
+                            image={process.env.PUBLIC_URL + '/mate_szathmari.png'} title="Máté Szathmári" />
+                        <Typography>Máté Szathmári</Typography>
+                    </Card>
+                </Grid>
             </Grid>
         </div>
     )
