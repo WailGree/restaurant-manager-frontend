@@ -56,7 +56,7 @@ export default function About() {
         <div>
             <Grid container spacing={0} className={classes.containerGrid}>
                 {authors.map((author, index) => (
-                    <Grid key={index} item xl={gridItemxl}>
+                    <Grid key={index} item xl={gridItemxl} lg={gridItemlg} md={gridItemmd} sm={gridItemsm} xs={gridItemxs}>
                         <Card className={classes.card}>
                             <CardHeader title={author.name} />
                             <CardMedia
