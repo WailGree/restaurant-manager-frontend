@@ -43,35 +43,19 @@ export default function About() {
         }
     ];
 
-    const gridItems = authors.map((index, author) => (
-        <Grid key={index} item xl={gridItemxl}>
-            <Card className={classes.card}>
-                <CardMedia
-                    className={classes.cardMedia}
-                    image={process.env.PUBLIC_URL + '/' + author.image} title={author.name + ' image'} />
-                <Typography>{author.name}</Typography>
-            </Card>
-        </Grid>
-    ));
     return (
         <div>
             <Grid container spacing={0} className={classes.containerGrid}>
-                <Grid item xl={gridItemxl}>
-                    <Card className={classes.card}>
-                        <CardMedia
-                            className={classes.cardMedia}
-                            image={process.env.PUBLIC_URL + '/roland_dominik_szilagyi.png'} title="Máté Szathmári image" />
-                        <Typography>Roland Dominik Szilágyi</Typography>
-                    </Card>
-                </Grid>
-                <Grid item xl={gridItemxl}>
-                    <Card className={classes.card}>
-                        <CardMedia
-                            className={classes.cardMedia}
-                            image={process.env.PUBLIC_URL + '/mate_szathmari.png'} title="Máté Szathmári" />
-                        <Typography>Máté Szathmári</Typography>
-                    </Card>
-                </Grid>
+                {authors.map((author, index) => (
+                    <Grid key={index} item xl={gridItemxl}>
+                        <Card className={classes.card}>
+                            <CardMedia
+                                className={classes.cardMedia}
+                                image={process.env.PUBLIC_URL + '/' + author.image} title={author.name + ' image'} />
+                            <Typography>{author.name}</Typography>
+                        </Card>
+                    </Grid>
+                ))}
             </Grid>
         </div>
     )
