@@ -1,4 +1,4 @@
-import { Card, Paper, Grid, CardMedia, CardContent, Typography, CardHeader, CardActions, IconButton } from "@material-ui/core";
+import { Card, Grid, CardMedia, CardHeader, CardActions, IconButton } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
