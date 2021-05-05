@@ -9,16 +9,22 @@ export default function Menu() {
     const gridItemxs = 12;
 
     const useStyle = makeStyles({
+        root: {
+            flexGrow: 1,
+            padding: '5%' //Fixes page overflow
+        },
         containerGrid: {
             paddingLeft: '20px',
-            paddingRight: '20px'
+            paddingRight: '20px',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
         }
     })
     const classes = useStyle();
 
     return (
-        <div>
-            <Grid container spacing={4} alignContent="center" alignItems="center" className={classes.gridContainer}>
+        <div className={classes.root}>
+            <Grid container spacing={6} className={classes.containerGrid}>
                 <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
                     <MenuItem />
                 </Grid>
