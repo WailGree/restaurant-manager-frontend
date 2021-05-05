@@ -20,6 +20,7 @@ export default function About() {
     }));
 
     const classes = useStyles();
+
     const authors = [{
         0: {
             name: "Roland Dominik Szilágyi"
@@ -28,38 +29,33 @@ export default function About() {
             name: "Máté Szathmári"
         }
     }]
-    console.log(process.env.PUBLIC_URL + '/logo192.png')
+
+    const gridItemxl = 2;
+    const gridItemlg = 4;
+    const gridItemmd = 6;
+    const gridItemsm = 8;
+    const gridItemxs = 12;
 
     return (
 
         <div>
-            <Grid container justify="center" spacing={2}>
-                {/* {authors.map((index, author) => ( */}
-                <Grid key={0} item xs={6} xm={4}>
-                    <Paper className={classes.paper} >
-                        <Card>
-                            {/* <img src={process.env.PUBLIC_URL + '/logo192.png'}/> */}
-                            <CardMedia className={classes.cardMedia} image={process.env.PUBLIC_URL + '/logo192.png'} />
-                            <CardContent>
-                                <Typography>Roland Dominik Szilágyi</Typography>
-                            </CardContent>
-                        </Card>
-                    </Paper>
+            <Grid container alignItems="flex-start" spacing={25}>
+                <Grid item xl={gridItemxl}>
+                    <Card>
+                        <CardMedia
+                            style={{ height: 600, paddingTop: '55%', leftPadding: '20px' }}
+                            image={process.env.PUBLIC_URL + '/roland_dominik_szilagyi.png'} title="Máté Szathmári" />
+                        <Typography>Roland Dominik Szilágyi</Typography>
+                    </Card>
                 </Grid>
-                <Grid key={1} item xs={6}>
-                    <Paper className={classes.paper} >
-                        <Card>
-                            {/* <img src={process.env.PUBLIC_URL + '/mate_szathmari.png'}/> */}
-                            <CardMedia
-                                style={{ height: 0, paddingTop: '55%' }}
-                                image={process.env.PUBLIC_URL + '/mate_szathmari.png'} title="Máté Szathmári" />
-                            <CardContent>
-                                <Typography>Máté Szathmári</Typography>
-                            </CardContent>
-                        </Card>
-                    </Paper>
+                <Grid item xl={gridItemxl}>
+                    <Card>
+                        <CardMedia
+                            style={{ height: 600, paddingTop: '55%' }}
+                            image={process.env.PUBLIC_URL + '/mate_szathmari.png'} title="Máté Szathmári" />
+                        <Typography>Máté Szathmári</Typography>
+                    </Card>
                 </Grid>
-                {/* ))} */}
             </Grid>
         </div>
     )
