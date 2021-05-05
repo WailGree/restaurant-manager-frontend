@@ -1,4 +1,4 @@
-import { Card, Paper, Grid, CardMedia, CardContent, Typography } from "@material-ui/core";
+import { Card, Paper, Grid, CardMedia, CardContent, Typography, CardHeader } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 
 export default function About() {
@@ -22,6 +22,10 @@ export default function About() {
         },
         card: {
             width: 400,
+        },
+        cardHeader: {
+            backgroundColor: 'black',
+            color: 'white'
         },
         cardMedia: {
             height: 600,
@@ -49,10 +53,10 @@ export default function About() {
                 {authors.map((author, index) => (
                     <Grid key={index} item xl={gridItemxl}>
                         <Card className={classes.card}>
+                            <CardHeader title={author.name} />
                             <CardMedia
                                 className={classes.cardMedia}
                                 image={process.env.PUBLIC_URL + '/' + author.image} title={author.name + ' image'} />
-                            <Typography>{author.name}</Typography>
                         </Card>
                     </Grid>
                 ))}
