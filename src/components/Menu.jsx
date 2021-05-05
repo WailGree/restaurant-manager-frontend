@@ -16,7 +16,7 @@ export default function Menu() {
         containerGrid: {
             paddingLeft: '20px',
             paddingRight: '20px',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             alignItems: 'flex-start',
         }
     })
@@ -31,6 +31,7 @@ export default function Menu() {
                 <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
                     <MenuItem />
                 </Grid>
+
                 <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
                     <MenuItem />
                 </Grid>
