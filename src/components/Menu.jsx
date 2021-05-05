@@ -1,7 +1,7 @@
 import MenuItem from './MenuItem';
 import { Grid, makeStyles } from '@material-ui/core';
 
-function Menu() {
+export default function Menu() {
     const gridItemxl = 2;
     const gridItemlg = 3;
     const gridItemmd = 4;
@@ -14,7 +14,6 @@ function Menu() {
             paddingRight: '20px'
         }
     })
-
     const classes = useStyle();
 
     return (
@@ -42,5 +41,3 @@ function Menu() {
         </div>
     )
 }
-
-export default Menu

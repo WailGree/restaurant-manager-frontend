@@ -8,7 +8,7 @@ import Menu from './Menu';
 import Contact from './Contact';
 import About from './About';
 
-function Navbar(props) {
+export default function Navbar(props) {
     const { match, history } = props;
     const { params } = match;
     const { page } = params;
@@ -70,5 +70,3 @@ function Navbar(props) {
         </div>
     )
 }
-
-export default Navbar

@@ -1,8 +1,7 @@
-import { Card, Paper, Grid, CardActionArea, CardMedia, CardContent, Typography } from "@material-ui/core";
+import { Card, Paper, Grid, CardMedia, CardContent, Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-// import matePng from './mate_szathmari.png';
 
-function About() {
+export default function About() {
     const useStyles = makeStyles((theme) => ({
         root: {
             flexGrow: 1
@@ -65,5 +64,3 @@ function About() {
         </div>
     )
 }
-
-export default About
