@@ -1,5 +1,7 @@
-import { Card, Paper, Grid, CardMedia, CardContent, Typography, CardHeader } from "@material-ui/core";
+import { Card, Paper, Grid, CardMedia, CardContent, Typography, CardHeader, CardActions, IconButton } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 export default function About() {
 
@@ -39,11 +41,14 @@ export default function About() {
         {
             name: 'Roland Dominik Szilágyi',
             image: 'roland_dominik_szilagyi.png',
-
+            gitHubPage: 'https://github.com/WailGree',
+            linkedInPage: 'https://www.linkedin.com/in/wailgree/'
         },
         {
             name: 'Máté Szathmári',
-            image: 'mate_szathmari.png'
+            image: 'mate_szathmari.png',
+            gitHubPage: 'https://github.com/mateszathmari',
+            linkedInPage: 'https://www.linkedin.com/in/mateszathmari/'
         }
     ];
 
@@ -57,6 +62,14 @@ export default function About() {
                             <CardMedia
                                 className={classes.cardMedia}
                                 image={process.env.PUBLIC_URL + '/' + author.image} title={author.name + ' image'} />
+                            <CardActions disableSpacing>
+                                <IconButton href={author.gitHubPage} aria-label={'Visit ' + author.name + '\'s GitHub profile'}>
+                                    <GitHubIcon />
+                                </IconButton>
+                                <IconButton href={author.linkedInPage} aria-label={'Visit ' + author.name + '\'s LinkedIn profile'}>
+                                    <LinkedInIcon />
+                                </IconButton>
+                            </CardActions>
                         </Card>
                     </Grid>
                 ))}
