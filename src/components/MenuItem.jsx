@@ -23,20 +23,19 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MenuItem(props) {
+export default function MenuItem({ props }) {
   const classes = useStyles();
-
   return (
     <Card className={classes.root} variant="outlined">
-      <CardActionArea centered>
+      <CardActionArea>
         Image comes here
       <CardContent>
           <Typography variant="h5" component="h2">
-            Item name{props.name}
+            {props.name}
           </Typography>
           <Typography variant="body2" component="p">
-            {props.description} description
-        </Typography>
+            {props.description}
+          </Typography>
         </CardContent>
       </CardActionArea>
     </Card>

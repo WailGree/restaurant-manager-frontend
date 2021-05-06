@@ -22,29 +22,18 @@ export default function Menu() {
         }
     })
     const classes = useStyle();
-
+    const exampleItems = [];
+    for (let i = 1; i <= 100; i++) {
+        exampleItems.push({ name: `Example ${i}`, description: `Example ${i} description` });
+    }
     return (
         <div className={classes.root}>
             <Grid container spacing={6} className={classes.containerGrid}>
-                <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
-                    <MenuItem />
-                </Grid>
-                <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
-                    <MenuItem />
-                </Grid>
-
-                <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
-                    <MenuItem />
-                </Grid>
-                <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
-                    <MenuItem />
-                </Grid>
-                <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
-                    <MenuItem />
-                </Grid>
-                <Grid item xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
-                    <MenuItem />
-                </Grid>
+                {exampleItems.map((item, index) => (
+                    <Grid item key={index} xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
+                        <MenuItem props={item} />
+                    </Grid>
+                ))};
             </Grid>
         </div>
     )
