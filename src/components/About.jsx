@@ -14,13 +14,14 @@ export default function About() {
     const useStyles = makeStyles((theme) => ({
         root: {
             flexGrow: 1,
-            padding: '5%' //Fixes page overflow
         },
         containerGrid: {
             paddingLeft: '10%',
             paddingRight: '10%',
             justifyContent: 'space-between',
             alignItems: 'center',
+            padding: '2%',
+            overflowX: 'hidden' //Fixes page overflow
         },
         card: {
             width: 400,

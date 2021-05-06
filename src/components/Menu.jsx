@@ -11,13 +11,14 @@ export default function Menu() {
     const useStyle = makeStyles({
         root: {
             flexGrow: 1,
-            padding: '5%' //Fixes page overflow
+            padding: '2%',
+            overflowX: 'hidden' //Fixes page overflow
         },
         containerGrid: {
             paddingLeft: '20px',
             paddingRight: '20px',
             justifyContent: 'flex-start',
-            alignItems: 'flex-start',
+            alignItems: 'flex-start'
         }
     })
     const classes = useStyle();
