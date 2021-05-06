@@ -16,14 +16,14 @@ export default function About() {
             flexGrow: 1,
         },
         containerGrid: {
-            paddingLeft: '10%',
+            paddingLeft: '2.5%', // Make both sides have same distance from border
             paddingRight: '10%',
             justifyContent: 'space-between',
             alignItems: 'center',
             padding: '5%' //Fixes page overflow
         },
         card: {
-            width: 400,
+            width: '150%',
         },
         cardHeader: {
             backgroundColor: 'black',
