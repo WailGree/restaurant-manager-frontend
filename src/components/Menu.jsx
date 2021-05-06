@@ -1,4 +1,5 @@
 import MenuItem from './MenuItem';
+import MenuItemModal from './MenuItemModal';
 import { Grid, makeStyles } from '@material-ui/core';
 
 export default function Menu() {
@@ -34,6 +35,7 @@ export default function Menu() {
                     </Grid>
                 ))};
             </Grid>
+            <MenuItemModal />
         </div>
     )
 }
