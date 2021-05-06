@@ -30,7 +30,7 @@ export default function Menu() {
             <Grid container spacing={6} className={classes.containerGrid}>
                 {exampleItems.map((item, index) => (
                     <Grid item key={index} xs={gridItemxs} xl={gridItemxl} lg={gridItemlg} sm={gridItemsm} md={gridItemmd}>
-                        <MenuItem props={item} />
+                        <MenuItem item={item} />
                     </Grid>
                 ))};
             </Grid>
