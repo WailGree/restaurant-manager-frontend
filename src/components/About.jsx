@@ -20,8 +20,7 @@ export default function About() {
             paddingRight: '10%',
             justifyContent: 'space-between',
             alignItems: 'center',
-            padding: '2%',
-            overflowX: 'hidden' //Fixes page overflow
+            padding: '5%' //Fixes page overflow
         },
         card: {
             width: 400,
