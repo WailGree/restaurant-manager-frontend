@@ -11,8 +11,7 @@ export default function Menu() {
     const useStyle = makeStyles({
         root: {
             flexGrow: 1,
-            padding: '2%',
-            overflowX: 'hidden' //Fixes page overflow
+            padding: '5%' //Fixes page overflow
         },
         containerGrid: {
             paddingLeft: '20px',
