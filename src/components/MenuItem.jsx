@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import { useStoreState, useStoreActions } from 'easy-peasy';
 
 const useStyles = makeStyles({
   root: {
@@ -23,11 +24,17 @@ const useStyles = makeStyles({
   },
 });
 
-function handleModalOpen() {
-  console.log("click");
-}
+
+
 
 export default function MenuItem({ item }) {
+  const setModalItemData = useStoreActions(actions => actions.setMenuItemModalData);
+  const toggleMenuItemModal = useStoreActions(actions => actions.toggleMenuItemModalState);
+
+  function handleModalOpen() {
+    setModalItemData(item);
+    toggleMenuItemModal();
+  }
 
   const classes = useStyles();
   return (
