@@ -31,9 +31,6 @@ export default function MenuItem(props) {
       <CardActionArea centered>
         Image comes here
       <CardContent>
-          <Typography className={classes.title} color="textSecondary" gutterBottom>
-
-          </Typography>
           <Typography variant="h5" component="h2">
             Item name{props.name}
           </Typography>
