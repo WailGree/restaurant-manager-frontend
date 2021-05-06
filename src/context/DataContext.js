@@ -1,8 +1,14 @@
-import { createStore } from 'easy-peasy';
+import { createStore, action } from 'easy-peasy';
 
 const context = createStore({
-    menuItemModalOpen: false,
-    menuItemModalData: []
+    menuItemModalState: false,
+    toggleMenuItemModalState: action((state) => {
+        state.toggleMenuItemModalState = !state.toggleMenuItemModalState;
+    }),
+    menuItemModalData: [],
+    setMenuItemModalData: action((state, data) => {
+        state.menuItemModalData = data;
+    })
 });
 
 export default context;
