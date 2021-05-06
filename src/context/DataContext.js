@@ -3,7 +3,7 @@ import { createStore, action } from 'easy-peasy';
 const context = createStore({
     menuItemModalState: false,
     toggleMenuItemModalState: action((state) => {
-        state.toggleMenuItemModalState = !state.toggleMenuItemModalState;
+        state.menuItemModalState = !state.menuItemModalState;
     }),
     menuItemModalData: [],
     setMenuItemModalData: action((state, data) => {
