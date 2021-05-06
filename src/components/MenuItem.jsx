@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { useStoreState, useStoreActions } from 'easy-peasy';
+import { useStoreActions } from 'easy-peasy';
 
 const useStyles = makeStyles({
   root: {
@@ -23,9 +23,6 @@ const useStyles = makeStyles({
     marginBottom: 12,
   },
 });
-
-
-
 
 export default function MenuItem({ item }) {
   const setModalItemData = useStoreActions(actions => actions.setMenuItemModalData);
