@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './style/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from "react-router-dom";
+import CssBaseline from '@material-ui/core/CssBaseline';
+import store from './context/DataContext';
+import { StoreProvider } from 'easy-peasy';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <CssBaseline />
+      <StoreProvider store={store}>
+        <App />
+      </StoreProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
